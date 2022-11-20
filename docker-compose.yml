@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  predictor:
+    build:
+      context: app
+      target: app
+    restart: always
+    command: /bin/bash -c 'python3 app.py'
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./data:/mnt/data
+      - ./model:/mnt/model
+    working_dir: /mnt/
+    environment:
+      PYTHONDONTWRITEBYTECODE: 1

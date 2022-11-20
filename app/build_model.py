@@ -9,10 +9,10 @@ from tsfresh.feature_extraction import settings
 
 class Model:
     def __init__(self,
-                 sp500_file="../data/SP500.csv",
-                 moex_file="../data/MOEX.csv",
-                 historical_file="../data/USDRUB_TOM.csv",
-                 model_file="../model/model.pkl"):
+                 sp500_file="data/SP500.csv",
+                 moex_file="data/MOEX.csv",
+                 historical_file="data/USDRUB_TOM.csv",
+                 model_file="model/model.pkl"):
         self.sp500_data = pd.read_csv(sp500_file)
         self.moex_data = pd.read_csv(moex_file)
         self.historical_data = pd.read_csv(historical_file)
