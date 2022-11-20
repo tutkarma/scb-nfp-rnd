@@ -8,12 +8,12 @@
 
 1. Пререквизиты: docker (20.10.14), docker-compose (1.29.2)
 
-2. Запуск сервиса локально
+2. Запуск сервиса
 ```
-cd cicd && docker-compose up --build -d
+docker-compose up --build -d
 ```
 
-3. Бэкенд будет доступен на `localhost:8000`
+3. API будет доступно на `localhost:8080`
 
 ### Endpoints
 
