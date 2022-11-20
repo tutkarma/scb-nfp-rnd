@@ -8,12 +8,12 @@
 
 1. Пререквизиты: docker (20.10.14), docker-compose (1.29.2)
 
-2. Запуск сервиса
+2. Запуск сервиса локально
 ```
-docker-compose up --build -d
+cd cicd && docker-compose up --build -d
 ```
 
-3. API будет доступно на `localhost:8080`
+3. Бэкенд будет доступен на `localhost:8000`
 
 ### Endpoints
 
@@ -48,4 +48,4 @@ Body
 
 [Backend](https://github.com/tutkarma/scb-nfp-backend)
 
-[Frontend]()
+[Frontend](https://github.com/comp-master-byte/sovkombank-hackathon)
