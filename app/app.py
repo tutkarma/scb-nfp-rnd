@@ -18,20 +18,17 @@ def predict():
             status=405
         )
 
-    #data = request.args
-    # address = data['address']
-    # volume = float(data['volume'])
-    # date = data['date']
-    data = {
-        "DATE": "2021-05-07",
-        "OPEN_cur": 61.1850,
-        "HIGH_cur": 61.1975,
-        "LOW_cur": 61.1850,
-        "CLOSE_cur": 61.1970,
-        "VOL_cur": 36311.0
-    }
+    data = request.args
+
+    # data = {
+    #     "DATE": "2021-05-07",
+    #     "OPEN_cur": 61.1850,
+    #     "HIGH_cur": 61.1975,
+    #     "LOW_cur": 61.1850,
+    #     "CLOSE_cur": 61.1970,
+    #     "VOL_cur": 36311.0
+    # }
     res = model.predict(data)
-    # dates = model.get_time(date, address, volume)
 
     return Response(
         json.dumps({'status': 'ok', 'data': res}),
